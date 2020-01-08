@@ -1,0 +1,134 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{lipsum}
+
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+
+\setbeamersize{text margin left=34pt,text margin right=34pt} 
+
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or %
+	April\or May \or June\or July\or August\or September\or October\or November\or %
+	December\fi, \number \year} 
+
+\setlength{\fboxsep}{0pt}
+\setlength{\fboxrule}{0.5pt}
+
+%\makeatletter
+%\patchcmd{\beamer@sectionintoc}
+%{\vfill}
+%{\vskip\itemsep}
+%{}
+%{}
+%\makeatother  
+
+\setbeamertemplate{navigation symbols}{}
+
+\makeatletter
+\newlength\leftmarginbeamer\setlength\leftmarginbeamer{\Gm@lmargin}
+\newlength\rightmarginbeamer\setlength\rightmarginbeamer{\Gm@rmargin}
+\makeatother
+
+\setbeamertemplate{title page}{%
+\vspace*{-30pt}%
+\hspace*{\dimexpr-\leftmarginbeamer+140pt\relax}%
+\fbox{%
+\begin{minipage}[c][0.75\paperheight]{0.65\paperwidth}%
+\protect\centering\LARGE\textbf\inserttitle\\\vfill%
+\protect\centering\Large\textbf\insertauthor\\\vfill%
+\protect\centering\normalsize\textbf\insertdate\\\vfill%
+\protect\centering\textbf\insertsubtitle\\%
+\end{minipage}
+}%
+}%
+
+\setbeamertemplate{headline}{}%
+
+\setbeamertemplate{footline}{%
+\hfill\footnotesize\insertpagenumber /\inserttotalframenumber\vspace*{2pt}\hspace*{2pt}%
+}%
+
+\setbeamertemplate{frametitle}{%
+\nointerlineskip\vskip 1.0pt\hspace*{\dimexpr-0.5\leftmarginbeamer\relax}%
+%\fbox{%
+\begin{minipage}[c][25pt]{0.85\paperwidth}%
+\textcolor{white}{\LARGE\textbf\insertframetitle}%
+\end{minipage}%
+%}%
+\\\nointerlineskip\vskip 1.0pt\hspace*{\dimexpr-0.5\leftmarginbeamer\relax}%
+%\fbox{%
+\begin{minipage}[c][15pt]{0.85\paperwidth}%
+	\textcolor{black}{\normalsize\textbf\insertframesubtitle}%
+\end{minipage}%
+%}%
+}%		
+	
+\setbeamertemplate{section in toc}{%
+{\color{black!60}\rule[0.25ex]{7pt}{7pt}}~~~\textcolor{black}{\Large\inserttocsection}%
+}%
+
+	
+\AtBeginSection[]{%
+{%
+\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{figs/section.png}}%
+\begin{frame}[plain]{}%
+\vspace*{28.0pt}%
+\hspace*{\dimexpr-\leftmarginbeamer\relax}%
+%\fbox{%
+\begin{minipage}[c][0.25\paperheight]{\paperwidth}%
+\protect\centering\LARGE\textcolor{white}{\textbf\insertsectionhead}%
+\end{minipage}%
+%}%
+\end{frame}%
+}%
+}%
+
+\usebackgroundtemplate{%
+	\includegraphics[width=\paperwidth,height=\paperheight]{figs/background.png}%
+}
+
+\title{Fluid flow control in intelligent wells for management of carbonate fields with pre-salt features}
+\author{Randerson Lemos\\[-5pt]{\scriptsize randerson.lemos@gmail.com}}
+\subtitle{www.unisim.cepetro.unicamp.br}
+\date{\today}
+\begin{document}
+%----------- titlepage ----------------------------------------------%
+{%
+\usebackgroundtemplate{\includegraphics[trim={0 0 0 1.25pt},width=\paperwidth,height=\paperheight]{figs/cover.png}}%
+\begin{frame}[plain]%
+\titlepage%
+\end{frame}%
+}
+
+%----------- toc ----------------------------------------------------%
+\begin{frame}[plain]{Agenda}
+\tableofcontents
+\end{frame}
+
+%----------- presentation -------------------------------------------%
+%----------- introduction -------------------------------------------%
+\section{Introduction}
+\begin{frame}[c]{Upstream Business}{O rato roeu a roupa do rei de roma}\nointerlineskip
+\begin{columns}[onlytextwidth]%
+	\column{0.47\textwidth}\justifying%
+		Success of upstream business are highly influenced by decisions that must be one at the beginning of the exploitation project Success of upstream business are highly influenced by decisions that must be one at the beginning of the exploitation project Success of upstream business are highly influenced by decisions that must be one at the Success of upstream business%
+	\column{0.47\textwidth}\justifying%
+	\rule{\textwidth}{150pt}%
+\end{columns}%
+\end{frame}%
+
+
+\begin{frame}[t]{Upstream Business}{O rato roeu a roupa do rei de roma}\nointerlineskip\justifying%
+Success of upstream business are highly influenced by decisions that must be one at the beginning of the exploitation project Success of upstream business are highly influenced by decisions that must be one at the beginning of the exploitation project Success of upstream business are highly influenced by decisions that must be one at the 
+\end{frame}
+
+%\section{Motivation}
+%\section{Objective}
+%\section{Methodology}
+%\section{Application}
+%\section{Sensibility}
+%\section{Conclusions}
+\end{document}
